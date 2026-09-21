@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 07 - Fibonacci</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Fibonacci Series</h1>
+
+<div class="box">
+
+    <input type="number" id="num" placeholder="Number of terms">
+
+    <button onclick="fibonacci()">Generate</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function fibonacci() {
+
+    let n = Number(document.getElementById("num").value);
+
+    let a = 0;
+    let b = 1;
+    let series = [];
+
+    for (let i = 0; i < n; i++) {
+
+        series.push(a);
+
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+
+    document.getElementById("output").innerHTML =
+        series.join(" , ");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 03 - Largest Number</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Largest of Three Numbers</h1>
+
+<div class="box">
+
+    <input type="number" id="n1" placeholder="Number 1">
+    <input type="number" id="n2" placeholder="Number 2">
+    <input type="number" id="n3" placeholder="Number 3">
+
+    <br><br>
+
+    <button onclick="findLargest()">Find Largest</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function findLargest() {
+
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+    let c = Number(document.getElementById("n3").value);
+
+    let largest = Math.max(a, b, c);
+
+    document.getElementById("output").innerHTML =
+        "Largest number = " + largest;
+
+}
+
+</script>
+
+</body>
+</html>

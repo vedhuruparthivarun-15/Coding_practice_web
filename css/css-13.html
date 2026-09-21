@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 13 - Display</title>
+
+    <style>
+        body {
+            background: #081018;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .block {
+            display: block;
+            background: #123b50;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .inline {
+            display: inline;
+            background: #714c1d;
+            padding: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background: #254d3c;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background: #17284d;
+        }
+
+        .flex div {
+            padding: 20px;
+            background: #315b9c;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .grid div {
+            background: #543b73;
+            padding: 20px;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Display Properties</h1>
+
+    <div class="block">Block</div>
+
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+
+    <br><br>
+
+    <div class="inline-block">
+        Inline Block
+    </div>
+
+    <h2>Flex</h2>
+
+    <div class="flex">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+
+    <h2>Grid</h2>
+
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p class="none">
+        This element uses display:none.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 14 - Array Average</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Sum and Average of Array</h1>
+
+<div class="box">
+
+    <input
+        type="text"
+        id="array"
+        placeholder="Example: 10,20,30,40"
+    >
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function calculate() {
+
+    let arr = document.getElementById("array").value
+        .split(",")
+        .map(Number);
+
+    let sum = 0;
+
+    for (let num of arr) {
+        sum += num;
+    }
+
+    let average = sum / arr.length;
+
+    document.getElementById("output").innerHTML =
+        "Sum = " + sum + "<br>" +
+        "Average = " + average;
+
+}
+
+</script>
+
+</body>
+</html>

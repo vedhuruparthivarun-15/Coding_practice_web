@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 11 - Sum of Digits</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Sum of Digits</h1>
+
+<div class="box">
+
+    <input type="number" id="num" placeholder="Enter number">
+
+    <button onclick="sumDigits()">Calculate</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function sumDigits() {
+
+    let num = Math.abs(
+        Number(document.getElementById("num").value)
+    );
+
+    let sum = 0;
+
+    while (num > 0) {
+
+        sum += num % 10;
+
+        num = Math.floor(num / 10);
+    }
+
+    document.getElementById("output").innerHTML =
+        "Sum of digits = " + sum;
+
+}
+
+</script>
+
+</body>
+</html>

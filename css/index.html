@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Programs</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #070707;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Background glow */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #0066ff;
+            filter: blur(180px);
+            opacity: 0.15;
+            top: -150px;
+            left: -150px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #00d9ff;
+            filter: blur(180px);
+            opacity: 0.12;
+            bottom: -150px;
+            right: -150px;
+            z-index: -1;
+        }
+
+        /* Navbar */
+
+        header {
+            width: 100%;
+            padding: 20px 7%;
+            background: rgba(15, 15, 15, 0.9);
+            border-bottom: 1px solid #222;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00b7ff;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #00b7ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #00b7ff;
+            color: black;
+            box-shadow: 0 0 20px rgba(0, 183, 255, 0.5);
+        }
+
+        /* Main */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 0;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .heading .small-title {
+            color: #00b7ff;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .heading h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .heading h1 span {
+            color: #00b7ff;
+        }
+
+        .heading p {
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        /* Program Grid */
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .program-card {
+            position: relative;
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid #292929;
+            border-radius: 18px;
+            padding: 25px;
+
+            min-height: 220px;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: 0.35s ease;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #00b7ff;
+            filter: blur(70px);
+            opacity: 0;
+            top: -30px;
+            right: -30px;
+            transition: 0.35s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            border-color: #00b7ff;
+            box-shadow: 0 15px 40px rgba(0, 183, 255, 0.12);
+        }
+
+        .program-card:hover::before {
+            opacity: 0.25;
+        }
+
+        /* Number */
+
+        .number {
+            color: #00b7ff;
+            font-family: monospace;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Title */
+
+        .program-card h2 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .program-card p {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        /* Open button */
+
+        .open-btn {
+            display: inline-block;
+            margin-top: 20px;
+
+            text-decoration: none;
+            color: white;
+
+            border: 1px solid #333;
+            padding: 10px 15px;
+            border-radius: 8px;
+
+            width: fit-content;
+
+            transition: 0.3s;
+        }
+
+        .open-btn:hover {
+            background: #00b7ff;
+            color: black;
+            border-color: #00b7ff;
+        }
+
+        /* Bottom */
+
+        .bottom {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+
+            background: #00b7ff;
+            color: black;
+
+            padding: 13px 25px;
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 183, 255, 0.5);
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+
+            .program-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .heading h1 {
+                font-size: 45px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .heading h1 {
+                font-size: 38px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header>
+
+    <div class="logo">
+        Web<span>Lab</span>
+    </div>
+
+    <a href="../index.html" class="home-btn">
+        ← Home
+    </a>
+
+</header>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+    <!-- Heading -->
+
+    <div class="heading">
+
+        <div class="small-title">
+            Practical Programs
+        </div>
+
+        <h1>
+            CSS <span>Programs</span>
+        </h1>
+
+        <p>
+            Explore CSS practical programs with
+            interactive code and live output.
+        </p>
+
+    </div>
+
+
+    <!-- Programs -->
+
+    <div class="program-grid">
+
+
+        <!-- 01 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 01
+            </div>
+
+            <h2>
+                CSS Introduction
+            </h2>
+
+            <p>
+                Create a webpage and demonstrate
+                basic CSS styling.
+            </p>
+
+            <a href="css-01.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 02 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 02
+            </div>
+
+            <h2>
+                CSS Selectors
+            </h2>
+
+            <p>
+                Demonstrate element, class,
+                ID and universal selectors.
+            </p>
+
+            <a href="css-02.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 03 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 03
+            </div>
+
+            <h2>
+                Colors and Backgrounds
+            </h2>
+
+            <p>
+                Apply different colors,
+                backgrounds and gradients.
+            </p>
+
+            <a href="css-03.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 04
+            </div>
+
+            <h2>
+                Fonts and Text
+            </h2>
+
+            <p>
+                Demonstrate font properties,
+                text alignment and decoration.
+            </p>
+
+            <a href="css-04.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 05
+            </div>
+
+            <h2>
+                Box Model
+            </h2>
+
+            <p>
+                Demonstrate margin, border,
+                padding and content.
+            </p>
+
+            <a href="css-05.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 06
+            </div>
+
+            <h2>
+                Width and Height
+            </h2>
+
+            <p>
+                Work with CSS width, height
+                and sizing properties.
+            </p>
+
+            <a href="css-06.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 07 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 07
+            </div>
+
+            <h2>
+                Display Property
+            </h2>
+
+            <p>
+                Demonstrate block, inline,
+                inline-block and none.
+            </p>
+
+            <a href="css-07.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 08 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 08
+            </div>
+
+            <h2>
+                Positioning
+            </h2>
+
+            <p>
+                Demonstrate static, relative,
+                absolute and fixed positioning.
+            </p>
+
+            <a href="css-08.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 09 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 09
+            </div>
+
+            <h2>
+                Flexbox
+            </h2>
+
+            <p>
+                Create layouts using CSS
+                Flexbox properties.
+            </p>
+
+            <a href="css-09.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 10
+            </div>
+
+            <h2>
+                CSS Grid
+            </h2>
+
+            <p>
+                Create a responsive layout
+                using CSS Grid.
+            </p>
+
+            <a href="css-10.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 11
+            </div>
+
+            <h2>
+                Borders and Shadows
+            </h2>
+
+            <p>
+                Demonstrate borders,
+                border radius and box shadows.
+            </p>
+
+            <a href="css-11.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 12
+            </div>
+
+            <h2>
+                Pseudo Classes
+            </h2>
+
+            <p>
+                Demonstrate hover, focus,
+                active and other pseudo classes.
+            </p>
+
+            <a href="css-12.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 13
+            </div>
+
+            <h2>
+                Transitions
+            </h2>
+
+            <p>
+                Add smooth CSS transitions
+                to webpage elements.
+            </p>
+
+            <a href="css-13.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 14
+            </div>
+
+            <h2>
+                Animations
+            </h2>
+
+            <p>
+                Create CSS animations using
+                keyframes and animation properties.
+            </p>
+
+            <a href="css-14.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="program-card">
+
+            <div class="number">
+                PROGRAM 15
+            </div>
+
+            <h2>
+                Responsive CSS
+            </h2>
+
+            <p>
+                Create a responsive webpage
+                using media queries.
+            </p>
+
+            <a href="css-15.html" class="open-btn">
+                Open Program →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Bottom Button -->
+
+    <div class="bottom">
+
+        <a href="../index.html" class="back-btn">
+            ← Back to Main Page
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    CSS Practical Programs • HTML-CSS-JS Practical Website
+
+</footer>
+
+
+</body>
+
+</html>

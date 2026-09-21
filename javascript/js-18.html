@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 18 - Arrays</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Arrays and Array Methods</h1>
+
+<div class="box">
+
+    <button onclick="runProgram()">
+        Run Program
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function runProgram() {
+
+    let fruits = ["Apple", "Banana", "Mango"];
+
+    fruits.push("Orange");
+
+    let joined = fruits.join(", ");
+
+    let removed = fruits.pop();
+
+    document.getElementById("output").innerHTML =
+        "Array = " + fruits.join(", ") + "<br>" +
+        "Length = " + fruits.length + "<br>" +
+        "Joined = " + joined + "<br>" +
+        "Removed = " + removed;
+
+}
+
+</script>
+
+</body>
+</html>

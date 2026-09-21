@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 17 - Strings</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Strings and String Methods</h1>
+
+<div class="box">
+
+    <input
+        type="text"
+        id="text"
+        placeholder="Enter a string"
+    >
+
+    <button onclick="showMethods()">Run</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function showMethods() {
+
+    let str = document.getElementById("text").value;
+
+    document.getElementById("output").innerHTML =
+        "Length = " + str.length + "<br>" +
+        "Uppercase = " + str.toUpperCase() + "<br>" +
+        "Lowercase = " + str.toLowerCase() + "<br>" +
+        "First Character = " + str.charAt(0) + "<br>" +
+        "Trimmed = " + str.trim() + "<br>" +
+        "Includes 'a' = " + str.includes("a");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 12 - Array Largest Smallest</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Largest and Smallest Array Element</h1>
+
+<div class="box">
+
+    <input
+        type="text"
+        id="array"
+        placeholder="Example: 10,5,30,2,15"
+    >
+
+    <button onclick="findValues()">Find</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function findValues() {
+
+    let arr = document.getElementById("array").value
+        .split(",")
+        .map(Number);
+
+    let largest = Math.max(...arr);
+    let smallest = Math.min(...arr);
+
+    document.getElementById("output").innerHTML =
+        "Largest = " + largest + "<br>" +
+        "Smallest = " + smallest;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 02 - Basic Selectors</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #081018;
+            color: white;
+            padding: 30px;
+        }
+
+        h1 {
+            color: cyan;
+        }
+
+        .box {
+            background: #123044;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #special {
+            color: yellow;
+        }
+
+        input[type="text"] {
+            border: 2px solid cyan;
+            padding: 10px;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors</h1>
+
+    <h2>Element Selector</h2>
+
+    <p class="box">Class Selector</p>
+
+    <p id="special">ID Selector</p>
+
+    <input type="text" placeholder="Attribute Selector">
+
+</body>
+</html>

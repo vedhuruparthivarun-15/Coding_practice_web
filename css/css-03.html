@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 03 - Combinators</title>
+
+    <style>
+        body {
+            background: #081018;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .container p {
+            color: cyan;
+        }
+
+        .container > h2 {
+            color: yellow;
+        }
+
+        h2 + p {
+            background: #17384a;
+            padding: 10px;
+        }
+
+        h2 ~ p {
+            border-left: 4px solid #00d9ff;
+            padding: 10px;
+        }
+
+        div {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Combinators</h1>
+
+    <div class="container">
+
+        <h2>Child Selector</h2>
+
+        <p>Adjacent Sibling</p>
+
+        <p>General Sibling</p>
+
+        <section>
+            <p>Descendant Selector</p>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Programs</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #090611;
+            color: white;
+        }
+
+        nav {
+            height: 70px;
+            background: #120b1d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            border-bottom: 1px solid #9d4edd;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #c77dff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #c77dff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 45px;
+            color: #c77dff;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #aaa;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #120b1d;
+            border: 1px solid #9d4edd55;
+            border-radius: 15px;
+            padding: 25px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: #c77dff;
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .number {
+            color: #c77dff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #c77dff;
+            border: 1px solid #c77dff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #c77dff;
+            color: #090611;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">WebLab</div>
+        <a href="../index.html">← Home</a>
+    </nav>
+
+    <div class="header">
+        <h1>JavaScript Programs</h1>
+        <p>Explore and practice 20 JavaScript practical programs</p>
+    </div>
+
+    <div class="container">
+
+        <div class="grid">
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 01</div>
+                    <h2>Hello World</h2>
+                    <p>Display Hello World using JavaScript.</p>
+                </div>
+                <a href="js-01.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 02</div>
+                    <h2>Arithmetic Operations</h2>
+                    <p>Perform basic arithmetic operations.</p>
+                </div>
+                <a href="js-02.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 03</div>
+                    <h2>Largest of Three Numbers</h2>
+                    <p>Find the largest among three numbers.</p>
+                </div>
+                <a href="js-03.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 04</div>
+                    <h2>Even or Odd</h2>
+                    <p>Check whether a number is even or odd.</p>
+                </div>
+                <a href="js-04.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 05</div>
+                    <h2>Positive, Negative or Zero</h2>
+                    <p>Check the type of a number.</p>
+                </div>
+                <a href="js-05.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 06</div>
+                    <h2>Factorial</h2>
+                    <p>Find the factorial of a number.</p>
+                </div>
+                <a href="js-06.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 07</div>
+                    <h2>Fibonacci Series</h2>
+                    <p>Generate the Fibonacci series.</p>
+                </div>
+                <a href="js-07.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 08</div>
+                    <h2>Prime Number</h2>
+                    <p>Check whether a number is prime.</p>
+                </div>
+                <a href="js-08.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 09</div>
+                    <h2>Palindrome Number</h2>
+                    <p>Check whether a number is a palindrome.</p>
+                </div>
+                <a href="js-09.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 10</div>
+                    <h2>Reverse a Number</h2>
+                    <p>Reverse the digits of a number.</p>
+                </div>
+                <a href="js-10.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 11</div>
+                    <h2>Sum of Digits</h2>
+                    <p>Find the sum of digits.</p>
+                </div>
+                <a href="js-11.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 12</div>
+                    <h2>Largest & Smallest in Array</h2>
+                    <p>Find the largest and smallest array elements.</p>
+                </div>
+                <a href="js-12.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 13</div>
+                    <h2>Sort an Array</h2>
+                    <p>Sort elements of an array.</p>
+                </div>
+                <a href="js-13.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 14</div>
+                    <h2>Sum & Average</h2>
+                    <p>Find the sum and average of an array.</p>
+                </div>
+                <a href="js-14.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 15</div>
+                    <h2>JavaScript Functions</h2>
+                    <p>Demonstrate JavaScript functions.</p>
+                </div>
+                <a href="js-15.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 16</div>
+                    <h2>Arrow Functions</h2>
+                    <p>Demonstrate arrow functions.</p>
+                </div>
+                <a href="js-16.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 17</div>
+                    <h2>Strings & String Methods</h2>
+                    <p>Demonstrate strings and string methods.</p>
+                </div>
+                <a href="js-17.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 18</div>
+                    <h2>Arrays & Array Methods</h2>
+                    <p>Demonstrate arrays and array methods.</p>
+                </div>
+                <a href="js-18.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 19</div>
+                    <h2>JavaScript Objects</h2>
+                    <p>Demonstrate JavaScript objects.</p>
+                </div>
+                <a href="js-19.html" class="btn">Open Program →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="number">JS 20</div>
+                    <h2>Date & Math Objects</h2>
+                    <p>Demonstrate Date and Math objects.</p>
+                </div>
+                <a href="js-20.html" class="btn">Open Program →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        WebLab • JavaScript Practical Programs
+    </footer>
+
+</body>
+</html>

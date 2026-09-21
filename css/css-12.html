@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 12 - Box Sizing</title>
+
+    <style>
+        body {
+            background: #081018;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            padding: 30px;
+            border: 8px solid cyan;
+            margin: 20px auto;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            background: #16384d;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background: #254d3c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box-Sizing</h1>
+
+    <div class="box content-box">
+        <h2>content-box</h2>
+        <p>
+            Width does not include padding
+            and border.
+        </p>
+    </div>
+
+    <div class="box border-box">
+        <h2>border-box</h2>
+        <p>
+            Width includes padding
+            and border.
+        </p>
+    </div>
+
+</body>
+</html>

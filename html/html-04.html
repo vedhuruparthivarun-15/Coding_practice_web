@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program 04</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #080808;
+            color: white;
+        }
+
+        header {
+            padding: 20px 7%;
+            background: #111;
+        }
+
+        header a {
+            color: #ff5a00;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        h1 span {
+            color: #ff5a00;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            background: #111;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 350px;
+            box-sizing: border-box;
+            background: #050505;
+            color: #00ff9d;
+            padding: 15px;
+            font-family: monospace;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #ff5a00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            background: white;
+        }
+
+        @media(max-width:800px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Back to HTML Programs</a>
+</header>
+
+<div class="container">
+
+<h1>HTML Program <span>04</span></h1>
+
+<p>Create an HTML page containing images and hyperlinks.</p>
+
+<div class="grid">
+
+<div class="box">
+
+<h2>Code Editor</h2>
+
+<textarea id="code"><!DOCTYPE html>
+<html>
+<head>
+    <title>Images and Links</title>
+</head>
+
+<body>
+
+<h1>Images and Hyperlinks</h1>
+
+<img
+    src="https://picsum.photos/500/250"
+    alt="Sample Image"
+    width="500">
+
+<h2>Useful Links</h2>
+
+<a href="https://www.google.com" target="_blank">
+    Visit Google
+</a>
+
+<br><br>
+
+<a href="https://www.wikipedia.org" target="_blank">
+    Visit Wikipedia
+</a>
+
+</body>
+</html></textarea>
+
+<button onclick="runCode()">▶ Run Code</button>
+
+</div>
+
+<div class="box">
+
+<h2>Output</h2>
+
+<iframe id="output"></iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function runCode() {
+    document.getElementById("output").srcdoc =
+        document.getElementById("code").value;
+}
+
+runCode();
+</script>
+
+</body>
+</html>

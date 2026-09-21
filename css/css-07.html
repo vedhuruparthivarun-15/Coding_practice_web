@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 07 - Gradients</title>
+
+    <style>
+        body {
+            background: #081018;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            height: 180px;
+            margin: 20px;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .linear {
+            background: linear-gradient(
+                90deg,
+                #00d9ff,
+                #0066ff,
+                #9b59ff
+            );
+        }
+
+        .radial {
+            background: radial-gradient(
+                circle,
+                #00d9ff,
+                #0066ff,
+                #111
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Gradients</h1>
+
+    <div class="box linear">
+        Linear Gradient
+    </div>
+
+    <div class="box radial">
+        Radial Gradient
+    </div>
+
+</body>
+</html>

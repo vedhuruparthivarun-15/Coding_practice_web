@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 20 - Date and Math</title>
+
+    <style>
+        body {
+            background: #090611;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c77dff;
+        }
+
+        .box {
+            background: #160d24;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #9d4edd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            color: #e0aaff;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Date and Math Objects</h1>
+
+<div class="box">
+
+    <button onclick="showObjects()">
+        Run Program
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function showObjects() {
+
+    let today = new Date();
+
+    let randomNumber = Math.random();
+
+    let squareRoot = Math.sqrt(25);
+
+    let power = Math.pow(2, 3);
+
+    let rounded = Math.round(4.7);
+
+    document.getElementById("output").innerHTML =
+        "Current Date = " + today + "<br>" +
+        "Random Number = " + randomNumber + "<br>" +
+        "Square Root of 25 = " + squareRoot + "<br>" +
+        "2³ = " + power + "<br>" +
+        "Rounded 4.7 = " + rounded;
+
+}
+
+</script>
+
+</body>
+</html>

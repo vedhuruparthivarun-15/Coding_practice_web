@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 05 - Backgrounds</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: white;
+            background-color: #081018;
+        }
+
+        .background {
+            height: 500px;
+
+            background-image:
+                url("https://picsum.photos/id/1015/1000/600");
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="box">
+            <h1>CSS Background</h1>
+            <p>
+                Image, color, position, size,
+                repeat and attachment
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 15 - Overflow</title>
+
+    <style>
+        body {
+            background: #081018;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .box {
+            width: 300px;
+            height: 120px;
+            margin: 25px auto;
+            padding: 20px;
+
+            border: 2px solid cyan;
+            background: #123b50;
+        }
+
+        .overflow {
+            overflow: auto;
+        }
+
+        .horizontal {
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+
+        .vertical {
+            overflow-y: scroll;
+        }
+
+        .long-content {
+            width: 700px;
+        }
+
+        .tall-content {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow</h1>
+
+    <h2>overflow: auto</h2>
+
+    <div class="box overflow">
+        This is an overflow example.
+        When the content is larger than the
+        box, scrollbars can appear automatically.
+        This demonstrates the overflow property.
+    </div>
+
+    <h2>overflow-x</h2>
+
+    <div class="box horizontal">
+        <div class="long-content">
+            This is a very long horizontal content
+            demonstrating overflow-x scrolling.
+            Keep scrolling horizontally to see
+            the complete content.
+        </div>
+    </div>
+
+    <h2>overflow-y</h2>
+
+    <div class="box vertical">
+        <div class="tall-content">
+            This is tall content.<br><br>
+            Line 1<br>
+            Line 2<br>
+            Line 3<br>
+            Line 4<br>
+            Line 5<br>
+            Line 6<br>
+            Line 7<br>
+            Line 8<br>
+            Line 9<br>
+            Line 10
+        </div>
+    </div>
+
+</body>
+</html>
